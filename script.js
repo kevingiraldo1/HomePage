@@ -37,3 +37,48 @@ function update() {
     }
 
 }
+
+
+//task
+const list = document.getElementById("list");
+const field = document.getElementById("field");
+const btn = document.getElementById("btn");
+
+
+btn.addEventListener('click', function() {
+  const paragraph = document.createElement('p');
+  paragraph.innerText = field.value;
+  list.appendChild(paragraph);
+  
+  field.value="";
+  
+  paragraph.addEventListener('click',function() {
+    paragraph.style.textDecoration="line-through";
+  });
+  
+  paragraph.addEventListener('dblclick',function(){
+      list.removeChild(paragraph);
+  })
+  
+  });
+
+  //RandomTask
+  const randBtn = document.getElementById("randBtn");
+  let randomTask = ['item1', 'item2', 'item3'];
+
+  randBtn.addEventListener('click',function() {
+    const paragraphRand = document.createElement('p');
+    let randomTasks = randomTask[Math.floor(Math.random() * randomTask.length)];
+    paragraphRand.innerText= randomTasks;
+    list.appendChild(paragraphRand);
+
+  paragraphRand.addEventListener('click', function() {
+    paragraphRand.style.textDecoration="line-through";
+  })
+
+  paragraphRand.addEventListener('dblclick', function() {
+    list.removeChild(paragraphRand);
+  })
+
+
+  });
