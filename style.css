@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 200px;
+    margin-left: 45%;
+    margin-top: 10%;
+}
+
+.main-group {
+    display: flex;
+    flex-direction: row;
+}
