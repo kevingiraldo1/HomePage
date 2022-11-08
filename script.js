@@ -19,6 +19,7 @@ function update() {
         let seconds = date.getSeconds();
         let amOrpm = hours>= 12? "pm" : "am";
 
+        month = month + 1;
         hours = (hours % 12 )|| 12;
 
         hours = formatZeroes(hours);
